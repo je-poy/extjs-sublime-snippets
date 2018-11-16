@@ -1,0 +1,33 @@
+<snippet>
+	<content><![CDATA[
+Ext.define({1:ComboName}),{
+	extend: 'Ext.form.field.ComboBox',
+	
+	initComponent: function () {
+		var self = this; 
+
+		Ext.apply(self, {
+			fieldLabel: $2,	
+			displayField: '$3',
+			valueField: '$4',
+			editable: false,
+			displayTpl: Ext.create('Ext.XTemplate',
+				'<tpl for=".">',
+					'{$3}',
+				'</tpl>'
+			),
+			listeners: {
+				afterrender: function(combo) {
+					var store = $5;
+					combo.bindStore(store);
+				}
+			}
+		});
+
+		self.callParent();
+	}
+});
+]]></content>
+	<tabTrigger>xcombo</tabTrigger>
+	<description>Ext Combo</description>
+</snippet>

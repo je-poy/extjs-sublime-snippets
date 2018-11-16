@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+Ext.define('${2:ModulePath}'),{
+	extend: '${3:ExtComponentCls}',
+	
+	controller: Ext.create('${4:ControllerPath}'),
+
+	initComponent: function () {
+		var self = this;
+
+		Ext.apply(self, {
+			$0
+		});
+
+		self.callParent();
+	}
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>xcls</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+	<description>EXT Define Snippet</description>
+</snippet>

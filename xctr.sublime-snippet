@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+Ext.define('${1:Module}'),{
+	extend: 'Ext.app.ViewController',
+
+	init: function () {
+		this.mainView = this.getView();
+	},
+
+	${3:functionName}: function (${4:arguments}) {
+		$5
+	}
+});
+]]></content>
+	<tabTrigger>xctr</tabTrigger>
+	<description>Ext ViewController</description>
+</snippet>
